@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">touchlearn</string>
+    <string name="touch_cab">calibration</string>
+    <string name="key_learn">key learn</string>
+    <string name="output">output config</string>
 </resources>
