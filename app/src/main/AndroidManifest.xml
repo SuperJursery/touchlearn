@@ -20,7 +20,8 @@
         </activity>
         <activity
             android:name=".calibration"
-            android:label="@string/touch_cab">
+            android:label="@string/touch_cab"
+            android:theme="@style/FullScreenTheme">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
