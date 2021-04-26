@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+    <ImageView
+        android:id="@+id/tc_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:background="#ffffff"
+        android:visibility="visible"
+        app:srcCompat="@drawable/px60" />
+
+    <ImageView
+        android:id="@+id/tc_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:background="#ffffff"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/px60" />
+
+    <ImageView
+        android:id="@+id/tc_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:background="#ffffff"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/px60" />
+
+    <ImageView
+        android:id="@+id/tc_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:background="#ffffff"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/px60" />
+
+    <TextView
+        android:id="@+id/txv_comfirm"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="#aaa"
+        android:text="Comfirm"
+        android:gravity="center"
+        android:visibility="invisible" />
 
 </FrameLayout>
