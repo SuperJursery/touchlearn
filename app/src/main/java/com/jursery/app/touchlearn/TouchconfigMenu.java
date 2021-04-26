@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 public class TouchconfigMenu extends AppCompatActivity {
+    private TouchLearnDebug debug_obj;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,5 +25,14 @@ public class TouchconfigMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        CheckBox debug_mode = (CheckBox)this.findViewById(R.id.debug_mode);
+        debug_mode.setOnCheckedChangeListener(
+                new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        debug_obj.debug_mask = isChecked;
+                    }
+                }
+        );
     }
 }

@@ -18,10 +18,12 @@ public class calibration extends AppCompatActivity {
     private ImageView tc_bottom;
     private TextView txv_comfirm;
     private int step;
+    private TouchLearnDebug debug_obj;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calibration_layout);
+        debug_obj = (TouchLearnDebug)getApplicationContext();
         tc_left = (ImageView)this.findViewById(R.id.tc_left);
         tc_top = (ImageView)this.findViewById(R.id.tc_top);
         tc_right = (ImageView)this.findViewById(R.id.tc_right);
@@ -35,7 +37,8 @@ public class calibration extends AppCompatActivity {
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_UP:
-                Toast.makeText(calibration.this, "Here coordinate X x Y :"+ev.getX()+" x "+ev.getY(), Toast.LENGTH_SHORT).show();
+                debug_obj.debug_toast_short("Here coordinate X x Y :"+ev.getX()+" x "+ev.getY());
+                //Toast.makeText(calibration.this, "Here coordinate X x Y :"+ev.getX()+" x "+ev.getY(), Toast.LENGTH_SHORT).show();
                 step_work(step);
                 step++;
                 break;
