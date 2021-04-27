@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.Toast;
 
 public class TouchconfigMenu extends AppCompatActivity {
     private TouchLearnDebug debug_obj;
@@ -15,6 +16,7 @@ public class TouchconfigMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        debug_obj = (TouchLearnDebug)getApplicationContext();;
         Button btn_cab = (Button) this.findViewById(R.id.btn_cab);
         btn_cab.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -31,6 +33,9 @@ public class TouchconfigMenu extends AppCompatActivity {
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         debug_obj.debug_mask = isChecked;
+                        if (isChecked) {
+                            debug_obj.checksystem();
+                        }
                     }
                 }
         );
