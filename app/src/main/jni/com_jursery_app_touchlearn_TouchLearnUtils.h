@@ -15,6 +15,46 @@ extern "C" {
 JNIEXPORT jstring JNICALL Java_com_jursery_app_touchlearn_TouchLearnUtils_nativeGetKernelVersion
   (JNIEnv *, jclass);
 
+/*
+ * Class:     com_jursery_app_touchlearn_TouchLearnUtils
+ * Method:    nativeSetTsConfig
+ * Signature: (Ljava/lang/String;)I
+ */
+JNIEXPORT jint JNICALL Java_com_jursery_app_touchlearn_TouchLearnUtils_nativeSetTsConfig
+  (JNIEnv *, jclass, jstring);
+
+/*
+ * Class:     com_jursery_app_touchlearn_TouchLearnUtils
+ * Method:    nativeGetTsConfig
+ * Signature: (Ljava/lang/String;)I
+ */
+JNIEXPORT jint JNICALL Java_com_jursery_app_touchlearn_TouchLearnUtils_nativeGetTsConfig
+  (JNIEnv *, jclass, jstring);
+
+/*
+ * Class:     com_jursery_app_touchlearn_TouchLearnUtils
+ * Method:    nativeCorrectTsConfig
+ * Signature: (I)I
+ */
+JNIEXPORT jint JNICALL Java_com_jursery_app_touchlearn_TouchLearnUtils_nativeCorrectTsConfig
+  (JNIEnv *, jclass, jint);
+
+/*
+ * Class:     com_jursery_app_touchlearn_TouchLearnUtils
+ * Method:    nativeUseTsConfig
+ * Signature: (Ljava/lang/String;)I
+ */
+JNIEXPORT jint JNICALL Java_com_jursery_app_touchlearn_TouchLearnUtils_nativeUseTsConfig
+  (JNIEnv *, jclass, jstring);
+
+/*
+ * Class:     com_jursery_app_touchlearn_TouchLearnUtils
+ * Method:    nativeIsTouchScreenChanged
+ * Signature: ()I
+ */
+JNIEXPORT jint JNICALL Java_com_jursery_app_touchlearn_TouchLearnUtils_nativeIsTouchScreenChanged
+  (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif
